@@ -3,18 +3,18 @@ const queue = require('./queue');
 
 const starTrekQ = new queue();
 
-// starTrekQ.enqueue("Kirk");
-starTrekQ.enqueue("Spock");
-starTrekQ.enqueue("Uhura");
-starTrekQ.enqueue("Sulu");
-starTrekQ.enqueue("Checkov");
-// console.log(JSON.stringify(starTrekQ));
+starTrekQ.enqueue('Kirk');
+// starTrekQ.enqueue('Spock');
+starTrekQ.enqueue('Uhura');
+starTrekQ.enqueue('Sulu');
+starTrekQ.enqueue('Checkov');
+
 
 const peek = queue => {
   console.log(queue.first);
 };
 
-// peek(starTrekQ);
+peek(starTrekQ);
 
 const isEmpty = queue => {
   if (!queue.first) {
@@ -24,8 +24,10 @@ const isEmpty = queue => {
   return false;
 };
 
-// isEmpty(starTrekQ);
+isEmpty(starTrekQ);
 
 const display = queue => {
   console.log(JSON.stringify(queue));
 };
+
+display(starTrekQ);
