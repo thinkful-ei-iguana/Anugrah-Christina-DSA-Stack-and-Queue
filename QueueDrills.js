@@ -26,8 +26,18 @@ const isEmpty = queue => {
 
 isEmpty(starTrekQ);
 
-const display = queue => {
-  console.log(JSON.stringify(queue));
-};
+function display(queue) {
+  if (!queue.first) {
+    return console.log('it is empty');
+  }
+  let currNode = queue.first;
+  while(currNode) {
+    console.log(currNode.data);
+    currNode = currNode.next;
+  }
+
+// const display = queue => {
+//   console.log(JSON.stringify(queue));
+}
 
 display(starTrekQ);

@@ -21,7 +21,7 @@ function isEmpty(stack) {
 
 function display(stack) {
     if (!stack.top) {
-        return console.log('it\'s empty');
+        return console.log('it is empty');
     }
     let currNode = stack.top;
     while(currNode) {
