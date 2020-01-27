@@ -34,24 +34,19 @@ function is_palindrome(s) {
     s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
     let palStack = new stack();
     let sReverse = '';
-
     for (let i=0; i<s.length; i++) {
         palStack.push(s[i]);
     }
-
     let currNode = palStack.top;
     for (let i=0; i<s.length; i++) {
         sReverse += palStack.pop();
-    }
-    
+    }  
     if (s === sReverse) {
         return true;
     }
-
     else {
         return false;
     }
- 
 }
 
 
