@@ -2,8 +2,8 @@ const _Node = require('./node.js');
 
 class Queue {
   constructor() {
-    this.value = null;
-    this.next = null;
+    this.first = null;
+    this.last = null;
   }
   enqueue(data) {
     const node = new _Node(data);

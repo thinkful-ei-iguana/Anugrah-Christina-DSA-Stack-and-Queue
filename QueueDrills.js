@@ -11,7 +11,7 @@ starTrekQ.enqueue('Checkov');
 
 
 const peek = queue => {
-  console.log(queue.first);
+  console.log(queue.first.data);
 };
 
 peek(starTrekQ);
@@ -36,8 +36,37 @@ function display(queue) {
     currNode = currNode.next;
   }
 
-// const display = queue => {
-//   console.log(JSON.stringify(queue));
+
 }
 
 display(starTrekQ);
+
+
+let mDancers = new queue();
+
+mDancers.enqueue('Frank');
+mDancers.enqueue('John');
+mDancers.enqueue('Sherlock');
+mDancers.enqueue('David');
+mDancers.enqueue('Christopher');
+
+let fDancers = new queue();
+
+fDancers.enqueue('Jane');
+fDancers.enqueue('Madonna');
+fDancers.enqueue('Beyonce');
+
+console.log(fDancers);
+console.log(mDancers);
+
+function SquareDance(F, M) {
+  while (F.first && M.first) {
+    F.dequeue();
+    M.dequeue();
+  }
+  display(F);
+  display(M);
+
+
+}
+SquareDance(fDancers, mDancers);
