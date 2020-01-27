@@ -16,12 +16,12 @@ function isEmpty(stack) {
     if (!stack.top) {
         return console.log('It is Empty');
     }
-     return console.log("it's not empty");
+     return console.log('it\'s not empty');
 }
 
 function display(stack) {
     if (!stack.top) {
-        return console.log("it's empty");
+        return console.log('it\'s empty');
     }
     let currNode = stack.top;
     while(currNode) {
@@ -62,8 +62,42 @@ starTrek.push('Scotty');
 //display(starTrek);
 
 console.log(is_palindrome('dad'));
-console.log(is_palindrome("A man, a plan, a canal: Panama"));
-console.log(is_palindrome("1001"));
-console.log(is_palindrome("Tauhida"));
+console.log(is_palindrome('A man, a plan, a canal: Panama'));
+console.log(is_palindrome('1001'));
+console.log(is_palindrome('Tauhida'));
+
+
+
+//5
+function sortStack(inputStack){
+    let sortedStack = new stack();
+    let highestNum;
+
+    while (inputStack.top) {
+        highestNum = inputStack.pop();
+        while (sortedStack.top && sortedStack.top.data > highestNum){
+            inputStack.push(sortedStack.pop());
+        }
+        sortedStack.push(highestNum);
+    }
+    while(sortedStack.top) {
+        inputStack.push(sortedStack.pop());
+    }
+    return inputStack;
+}
+const test = function () {
+    let testStack = new stack();
+
+    testStack.push(3);
+    testStack.push(4);
+    testStack.push(55);
+    testStack.push(21);
+
+    return testStack;
+};
+let whatever = sortStack(test());
+// console.log('sort number: ', sortStack(test()));
+// console.log('sort stack', sortStack(main()));
+display(whatever);
 
 
